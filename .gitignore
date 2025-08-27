@@ -1,0 +1,22 @@
+# Build outputs
+bin/
+obj/
+
+# NuGet packages
+.nuget/
+packages/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+
+# Visual Studio cache/options
+.vs/
+
+# Runtime files
+appsettings.Development.json
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
