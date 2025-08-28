@@ -1,0 +1,13 @@
+# Use SDK 
+FROM mcr.microsoft.com/dotnet/sdk:8.0
+WORKDIR /app
+
+# Copy everything 
+COPY . .
+
+# Restore and build
+RUN dotnet restore 
+RUN dotnet publish -c Release -o out
+
+# Run Using SDK
+CMD [ "dotnet", "out/MyApp.dll" ]
