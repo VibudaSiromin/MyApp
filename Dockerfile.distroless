@@ -9,4 +9,4 @@ RUN dotnet publish MyApp.csproj -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-jammy-chiseled AS runtime
 WORKDIR /app
 COPY --from=build /app/publish/ .
-CMD [ "dotnet", "MyApp.dll" ]
+ENTRYPOINT [ "dotnet", "MyApp.dll" ]
