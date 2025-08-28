@@ -10,4 +10,4 @@ RUN dotnet restore
 RUN dotnet publish MyApp.csproj -c Release -o out
 
 # Run Using SDK
-CMD [ "dotnet", "out/MyApp.dll" ]
+ENTRYPOINT [ "dotnet", "out/MyApp.dll" ]
