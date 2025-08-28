@@ -7,7 +7,7 @@ COPY . .
 
 # Restore and build
 RUN dotnet restore 
-RUN dotnet publish -c Release -o out
+RUN dotnet publish MyApp.csproj -c Release -o out
 
 # Run Using SDK
 CMD [ "dotnet", "out/MyApp.dll" ]
