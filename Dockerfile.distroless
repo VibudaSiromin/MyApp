@@ -6,7 +6,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /app/publish
 
 #Runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-distroless AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-jammy-chiseled AS runtime
 WORKDIR /app
 COPY --from=build /app/publish/ .
 CMD [ "dotnet", "MyApp.dll" ]
